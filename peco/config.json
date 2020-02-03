@@ -1,0 +1,9 @@
+{
+  "Prompt": ">",
+  "OnCancel": "error",
+  "Style": {
+    "Query": ["white", "bold"],
+    "Selected": ["on_cyan", "white"],
+    "Matched": ["white", "bold"]
+  }
+}
