@@ -3,14 +3,16 @@ setup: \
 	setup-nvim \
 	setup-git  \
 	setup-peco \
-	setup-tmux
+	setup-tmux \
+	setup-vscode
 
 clean: \
 	clean-zsh  \
 	clean-nvim \
 	clean-git  \
 	clean-peco \
-	clean-tmux
+	clean-tmux \
+	clean-vscode
 
 setup-zsh:
 	ln -s $(shell pwd)/zsh/.zshrc  ~/.zshrc
@@ -45,3 +47,12 @@ setup-tmux:
 
 clean-tmux:
 	-rm ~/.tmux.conf
+
+setup-vscode:
+	mkdir -p ~/.config/Code/User
+	ln -s $(shell pwd)/vscode/settings.json ~/.config/Code/User/settings.json
+	ln -s $(shell pwd)/vscode/keybindings.json ~/.config/Code/User/keybindings.json
+
+clean-vscode:
+	-rm ~/.config/Code/User/settings.json
+	-rm ~/.config/Code/User/keybindings.json
