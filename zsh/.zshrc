@@ -23,7 +23,7 @@ PROMPT='%B%F{cyan}%n@%m%f:%F{white}%~ ${vcs_info_msg_0_}
 
 # peco
 function peco-history() {
-  TARGET=`history -n 1 | tac | peco --prompt 'history>'`
+  TARGET=$(history -n 1 | tac | peco --prompt 'history>')
   if [ $? -ne 0 ]; then
     return
   fi
@@ -34,3 +34,5 @@ function peco-history() {
 zle -N peco-history
 bindkey '^R' peco-history
 
+# direnv
+eval "$(direnv hook zsh)"
