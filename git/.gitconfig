@@ -1,0 +1,8 @@
+[user]
+	name = somq14
+	email = som.q14@gmail.com
+
+[alias]
+	st = status
+	br = branch
+	co = checkout
