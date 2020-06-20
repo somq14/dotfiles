@@ -6,3 +6,5 @@
 	st = status
 	br = branch
 	co = checkout
+[core]
+	editor = vi
