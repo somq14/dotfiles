@@ -1,13 +1,39 @@
-// Place your key bindings in this file to override the defaultsauto[]
 [
+    // ctrl+jでパネルをトグルするため
     {
-        "key": "ctrl+f1",
-        "command": "editor.action.showHover",
-        "when": "editorTextFocus"
+        "key": "ctrl+j",
+        "command": "-extension.vim_ctrl+j",
+        "when": "editorTextFocus && vim.active && vim.use<C-j> && !inDebugRepl"
+    },
+    // ctrl+jで改行をするため
+    {
+        "key": "ctrl+m",
+        "command": "-editor.action.toggleTabFocusMode"
+    },
+    // ctrl+hをbackspaceにするため
+    {
+        "key": "ctrl+h",
+        "command": "deleteLeft",
+        "when": "inputFocus"
+    },
+    // ターミナルではctrl+pによるquickOpenを無効化
+    {
+        "key": "ctrl+p",
+        "command": "-workbench.action.quickOpen"
     },
     {
-        "key": "ctrl+k ctrl+i",
-        "command": "-editor.action.showHover",
-        "when": "editorTextFocus"
-    }
+        "key": "ctrl+p",
+        "command": "workbench.action.quickOpen",
+        "when": "!terminalFocus"
+    },
+    // ターミナルではctrl+eによるquickOpenを無効化
+    {
+        "key": "ctrl+e",
+        "command": "-workbench.action.quickOpen"
+    },
+    {
+        "key": "ctrl+e",
+        "command": "workbench.action.quickOpen",
+        "when": "!terminalFocus"
+    },
 ]
