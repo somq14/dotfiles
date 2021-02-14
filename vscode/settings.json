@@ -1,7 +1,12 @@
 {
+  "editor.fontFamily": "'Ubuntu Mono'",
   "editor.minimap.enabled": false,
   "editor.formatOnSave": true,
-  "window.zoomLevel": -1,
-  "go.formatTool": "goimports",
-  "go.useLanguageServer": true
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+
+  // emmetの補完を無効化
+  "emmet.showExpandedAbbreviation": "never",
 }
