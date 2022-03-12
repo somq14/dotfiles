@@ -1,12 +1,30 @@
 {
-  "editor.fontFamily": "'Ubuntu Mono'",
+  // UI を縮小
+  "window.zoomLevel": -1,
+
+  // ウィンドウを透過する
+  // cf. https://marketplace.visualstudio.com/items?itemName=s-nlf-fh.glassit
+  "glassit.alpha": 200,
+  "glassit.step": 10,
+
+  // ミニマップ (エディタ右端の帯) を無効化
   "editor.minimap.enabled": false,
+  // コード整形に prettier を使う
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  // ファイル保存時にコード整形する
   "editor.formatOnSave": true,
+  // ファイル保存時にリントエラーを自動修正する
   "editor.codeActionsOnSave": {
     "source.fixAll": true
   },
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  // vim extension の surround 機能を有効化
+  "vim.surround": true,
 
-  // emmetの補完を無効化
-  "emmet.showExpandedAbbreviation": "never",
+  // TypeScript で ファイル移動時に import パスを更新する
+  "typescript.updateImportsOnFileMove.enabled": "always",
+
+  // devcontainer に dotfiles をインストールする
+  "dotfiles.repository": "https://github.com/somq14/devcontainer.git",
+  "dotfiles.targetPath": "~/devcontainer",
+  "dotfiles.installCommand": "~/devcontainer/dotfiles/install.sh"
 }

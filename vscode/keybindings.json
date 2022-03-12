@@ -1,54 +1,57 @@
 [
-  // ctrl+jでパネルをトグルするため
-  {
-    "key": "ctrl+j",
-    "command": "-extension.vim_ctrl+j",
-    "when": "editorTextFocus && vim.active && vim.use<C-j> && !inDebugRepl"
-  },
-  // ctrl+jで改行をするため
-  {
-    "key": "ctrl+m",
-    "command": "-editor.action.toggleTabFocusMode"
-  },
-  // ctrl+hをbackspaceにするため
-  {
-    "key": "ctrl+h",
-    "command": "deleteLeft",
-    "when": "inputFocus"
-  },
-  // ターミナルではctrl+pによるquickOpenを無効化
+  // ターミナルでの移動・編集方法を指定
   {
     "key": "ctrl+p",
-    "command": "-workbench.action.quickOpen"
+    "command": "cursorUp",
+    "when": "terminalFocus"
   },
   {
-    "key": "ctrl+p",
-    "command": "workbench.action.quickOpen",
-    "when": "!terminalFocus"
-  },
-  // ターミナルではctrl+eによるquickOpenを無効化
-  {
-    "key": "ctrl+e",
-    "command": "-workbench.action.quickOpen"
+    "key": "ctrl+f",
+    "command": "cursorRight",
+    "when": "terminalFocus"
   },
   {
     "key": "ctrl+e",
-    "command": "workbench.action.quickOpen",
-    "when": "!terminalFocus"
-  },
-  // コードに対するホバー操作のショートカット
-  {
-    "key": "ctrl+shift+h",
-    "command": "-workbench.action.replaceInFiles"
+    "command": "cursorEnd",
+    "when": "terminalFocus"
   },
   {
-    "key": "ctrl+k ctrl+i",
-    "command": "-editor.action.showHover",
-    "when": "editorTextFocus"
+    "key": "ctrl+k",
+    "command": "deleteAllRight",
+    "when": "terminalFocus"
+  },
+
+  // vim のキーバインドを削除し、vscodeのキーバインドを優先する
+  {
+    "key": "ctrl+b",
+    "command": "-extension.vim_ctrl+b"
   },
   {
-    "key": "ctrl+shift+h",
+    "key": "ctrl+f",
+    "command": "-extension.vim_ctrl+f"
+  },
+
+  // 次の候補の選択も ctrl + space にする
+  {
+    "key": "ctrl+space",
+    "command": "selectNextSuggestion",
+    "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
+  },
+
+  // ホバー操作
+  {
+    "key": "ctrl+,",
+    "command": "-workbench.action.openSettings"
+  },
+  {
+    "key": "ctrl+,",
     "command": "editor.action.showHover",
     "when": "editorTextFocus"
+  },
+
+  // タブ操作
+  {
+    "key": "ctrl+tab",
+    "command": "workbench.action.nextEditorInGroup"
   }
 ]
