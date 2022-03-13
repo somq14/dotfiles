@@ -4,7 +4,7 @@ set -eu
 SRC=$(dirname $0)
 DEST=$HOME
 
-for FILE in (".gitconfig" ".gitmessage"); do
+for FILE in ".gitconfig" ".gitmessage"; do
   if [ -e $DEST/$FILE ]; then
     rm -i $DEST/$FILE
   fi
