@@ -4,7 +4,7 @@
 
   // ウィンドウを透過する
   // cf. https://marketplace.visualstudio.com/items?itemName=s-nlf-fh.glassit
-  "glassit.alpha": 200,
+  "glassit.alpha": 220,
   "glassit.step": 10,
 
   // ミニマップ (エディタ右端の帯) を無効化
