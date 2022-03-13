@@ -2,13 +2,14 @@
 	name = somq14
 	email = som.q14@gmail.com
 
+[core]
+	editor = vi
+	ignorecase = false
+
 [alias]
 	st = status
 	br = branch
 	co = checkout
-
-[core]
-	editor = vi
 
 [commit]
 	template = ~/.gitmessage
