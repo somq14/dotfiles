@@ -24,7 +24,7 @@
   "typescript.updateImportsOnFileMove.enabled": "always",
 
   // devcontainer に dotfiles をインストールする
-  "dotfiles.repository": "https://github.com/somq14/devcontainer.git",
-  "dotfiles.targetPath": "~/devcontainer",
-  "dotfiles.installCommand": "~/devcontainer/dotfiles/install.sh"
+  "dotfiles.repository": "https://github.com/somq14/dotfiles.git",
+  "dotfiles.targetPath": "~/dotfiles",
+  "dotfiles.installCommand": "~/dotfiles/devcontainer/install.sh"
 }
