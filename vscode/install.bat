@@ -12,7 +12,7 @@ for %%F in ("settings.json" "keybindings.json") do (
   mklink %DEST%\%%F %SRC%\%%F
 )
 
-for /f %%e in (extensions.txt) do (
+for /f %%e in (%SRC%\extensions.txt) do (
   code --force --install-extension %%e
 )
 
