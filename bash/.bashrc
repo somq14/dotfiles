@@ -31,7 +31,7 @@ if [ ! -e ~/.persistent/git-prompt.sh ]; then
   curl --silent https://raw.githubusercontent.com/git/git/v2.35.1/contrib/completion/git-prompt.sh -o ~/.persistent/git-prompt.sh
 fi
 source ~/.persistent/git-prompt.sh
-export PS1="\[\e[1;34m\]\D{%FT%T%z}:\[\e[1;32m\]\w\[\e[1;37m\]$(__git_ps1)\n\[\e[1;37m\]\$\[\e[m\] "
+export PS1='\[\e[1;34m\]\D{%FT%T%z}:\[\e[1;32m\]\w\[\e[1;37m\]$(__git_ps1)\012\[\e[1;37m\]\$\[\e[m\] '
 
 # ls, grep をカラフルにする
 alias ls='ls --color=auto'
