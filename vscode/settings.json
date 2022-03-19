@@ -17,11 +17,17 @@
   "editor.codeActionsOnSave": {
     "source.fixAll": true
   },
+  // モノレポで eslintrc を検出する
+  "eslint.workingDirectories": [{ "mode": "auto" }],
   // vim extension の surround 機能を有効化
   "vim.surround": true,
 
-  // TypeScript で ファイル移動時に import パスを更新する
+  // JavaScript, TypeScript で ファイル移動時に import パスを更新する
   "typescript.updateImportsOnFileMove.enabled": "always",
+  "javascript.updateImportsOnFileMove.enabled": "always",
+
+  // emmet のサジェストを表示しない
+  "emmet.showAbbreviationSuggestions": false,
 
   // devcontainer に dotfiles をインストールする
   "dotfiles.repository": "https://github.com/somq14/dotfiles.git",
