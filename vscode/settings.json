@@ -1,6 +1,8 @@
 {
   // UI を縮小
   "window.zoomLevel": -1,
+  // windows でのデフォルトのシェルを bash にする
+  "terminal.integrated.defaultProfile.windows": "Git Bash",
 
   // ウィンドウを透過する
   // cf. https://marketplace.visualstudio.com/items?itemName=s-nlf-fh.glassit
