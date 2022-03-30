@@ -33,9 +33,10 @@ fi
 source ~/.persistent/git-prompt.sh
 export PS1='\[\e[1;34m\]\D{%FT%T%z}:\[\e[1;32m\]\w\[\e[1;37m\]$(__git_ps1)\012\[\e[1;37m\]\$\[\e[m\] '
 
-# ls, grep をカラフルにする
+# ls, grep, less をカラフルにする
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
+alias less='less -R'
 
 # ファイル削除前に確認する
 alias rm='rm -i'
