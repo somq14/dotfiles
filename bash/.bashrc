@@ -1,5 +1,5 @@
 # タイムゾーンを日本にする
-export TZ='Asia/Tokyo'
+export TZ='JST-9'
 
 # コマンド履歴の保存先を設定
 mkdir -p ~/.persistent
