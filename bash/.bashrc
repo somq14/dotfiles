@@ -2,8 +2,8 @@
 export TZ='JST-9'
 
 # コマンド履歴の保存先を設定
-mkdir -p ~/.persistent
-export HISTFILE=~/.persistent/.bash_history
+mkdir -p ~/.bash
+export HISTFILE=~/.bash/.bash_history
 
 # コマンド履歴の保存件数を設定
 export HISTSIZE=10000
@@ -21,16 +21,16 @@ share_history(){
 export PROMPT_COMMAND='share_history'
 
 # Git の補完を有効化
-if [ ! -e ~/.persistent/git-completion.bash ]; then
-  curl --silent https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -o ~/.persistent/git-completion.bash
+if [ ! -e ~/.bash/git-completion.bash ]; then
+  curl --silent https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -o ~/.bash/git-completion.bash
 fi
-source ~/.persistent/git-completion.bash
+source ~/.bash/git-completion.bash
 
 # プロンプトの設定
-if [ ! -e ~/.persistent/git-prompt.sh ]; then
-  curl --silent https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh -o ~/.persistent/git-prompt.sh
+if [ ! -e ~/.bash/git-prompt.sh ]; then
+  curl --silent https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh -o ~/.bash/git-prompt.sh
 fi
-source ~/.persistent/git-prompt.sh
+source ~/.bash/git-prompt.sh
 export PS1='\[\e[1;34m\]\D{%FT%T%z}:\[\e[1;32m\]\w\[\e[1;37m\]$(__git_ps1)\012\[\e[1;37m\]\$\[\e[m\] '
 
 # ls, grep, less をカラフルにする
