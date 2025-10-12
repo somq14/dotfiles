@@ -22,13 +22,13 @@ export PROMPT_COMMAND='share_history'
 
 # Git の補完を有効化
 if [ ! -e ~/.persistent/git-completion.bash ]; then
-  curl --silent https://raw.githubusercontent.com/git/git/v2.35.1/contrib/completion/git-completion.bash -o ~/.persistent/git-completion.bash
+  curl --silent https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -o ~/.persistent/git-completion.bash
 fi
 source ~/.persistent/git-completion.bash
 
 # プロンプトの設定
 if [ ! -e ~/.persistent/git-prompt.sh ]; then
-  curl --silent https://raw.githubusercontent.com/git/git/v2.35.1/contrib/completion/git-prompt.sh -o ~/.persistent/git-prompt.sh
+  curl --silent https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh -o ~/.persistent/git-prompt.sh
 fi
 source ~/.persistent/git-prompt.sh
 export PS1='\[\e[1;34m\]\D{%FT%T%z}:\[\e[1;32m\]\w\[\e[1;37m\]$(__git_ps1)\012\[\e[1;37m\]\$\[\e[m\] '
