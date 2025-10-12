@@ -11,8 +11,5 @@
 	br = branch
 	co = checkout
 
-[commit]
-	template = ~/.gitmessage
-
 [pull]
 	rebase = false

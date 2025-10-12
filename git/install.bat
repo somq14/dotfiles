@@ -3,7 +3,7 @@
 set SRC=%~dp0
 set DEST=%HOMEPATH%
 
-for %%F in (".gitconfig" ".gitmessage") do (
+for %%F in (".gitconfig") do (
   if exist %DEST%\%%F (
     del /p %DEST%\%%F
   )
