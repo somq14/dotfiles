@@ -1,24 +1,19 @@
+# bash 関連ファイルを保存するディレクトリを作成
+mkdir -p ~/.bash
+
 # タイムゾーンを日本にする
 export TZ='JST-9'
 
 # コマンド履歴の保存先を設定
-mkdir -p ~/.bash
 export HISTFILE=~/.bash/.bash_history
-
-# コマンド履歴の保存件数を設定
+# コマンド履歴の保存数を増やす（バッファサイズ）
 export HISTSIZE=10000
-export HISTFILESIZE=100000
-
-# コマンド履歴は重複を除去し、空白から始まるコマンドは記録しない
-export HISTCONTROL=ignoreboth
-
+# コマンド履歴の保存数を増やす（ファイルサイズ）
+export HISTFILESIZE=10000
+# コマンド履歴の保存時は上書きではなく追記する
+shopt -s histappend
 # コマンド実行のたびに履歴をファイルと同期する
-share_history(){
-  history -a # ファイルに履歴を書き出す
-  history -c # メモリ上に保持している履歴をクリア
-  history -r # ファイルから履歴を読み出す
-}
-export PROMPT_COMMAND='share_history'
+export PROMPT_COMMAND='history -a; history -n'
 
 # Git の補完を有効化
 if [ ! -e ~/.bash/git-completion.bash ]; then
@@ -26,7 +21,7 @@ if [ ! -e ~/.bash/git-completion.bash ]; then
 fi
 source ~/.bash/git-completion.bash
 
-# プロンプトの設定
+# Git のプロンプト表示を有効化
 if [ ! -e ~/.bash/git-prompt.sh ]; then
   curl --silent https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh -o ~/.bash/git-prompt.sh
 fi
