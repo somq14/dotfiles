@@ -1,12 +1,10 @@
 {
-  // UI を縮小
-  "window.zoomLevel": -1,
   // windows でのデフォルトのシェルを bash にする
   "terminal.integrated.defaultProfile.windows": "Git Bash",
 
   // ウィンドウを透過する
   // cf. https://marketplace.visualstudio.com/items?itemName=s-nlf-fh.glassit
-  "glassit.alpha": 220,
+  "glassit.alpha": 245,
   "glassit.step": 10,
 
   // ミニマップ (エディタ右端の帯) を無効化
@@ -29,10 +27,5 @@
   "javascript.updateImportsOnFileMove.enabled": "always",
 
   // emmet のサジェストを表示しない
-  "emmet.showAbbreviationSuggestions": false,
-
-  // devcontainer に dotfiles をインストールする
-  "dotfiles.repository": "https://github.com/somq14/dotfiles.git",
-  "dotfiles.targetPath": "~/dotfiles",
-  "dotfiles.installCommand": "~/dotfiles/devcontainer/install.sh"
+  "emmet.showAbbreviationSuggestions": false
 }
